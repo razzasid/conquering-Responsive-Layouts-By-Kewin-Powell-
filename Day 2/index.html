@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>em vs rem Example</title>
+    <style>
+      /* Root font size */
+      html {
+        font-size: 16px;
+      }
+
+      /* Parent element */
+      .container {
+        font-size: 20px; /* 1em = 20px here */
+        background-color: lightgray;
+        padding: 1em; /* 20px padding, relative to container's font size */
+        margin-bottom: 20px;
+      }
+
+      /* Child element with rem padding */
+      .child-rem {
+        font-size: 14px; /* 1rem = 16px (root size), font-size here doesn't affect padding */
+        background-color: lightblue;
+        padding: 1rem; /* 16px padding, relative to root */
+      }
+
+      /* Child element with em padding */
+      .child-em {
+        font-size: 14px; /* 1em = 14px here, padding will adjust based on this */
+        background-color: lightgreen;
+        padding: 1em; /* 14px padding, relative to the child's font size */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      Container (font-size: 20px, padding: 1em → 20px)
+      <div class="child-rem">
+        Child with rem padding (font-size: 14px, padding: 1rem → 16px)
+      </div>
+      <div class="child-em">
+        Child with em padding (font-size: 14px, padding: 1em → 14px)
+      </div>
+    </div>
+  </body>
+</html>
