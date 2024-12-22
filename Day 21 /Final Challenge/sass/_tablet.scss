@@ -1,0 +1,85 @@
+@media (min-width: 700px) {
+  .right-content {
+    display: flex;
+    gap: 2em;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav {
+    width: 100%;
+    // border: 2px solid red;
+    visibility: visible;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: auto;
+    position: relative;
+  }
+
+  .nav__item {
+    margin-top: 0 !important;
+  }
+  .nav__list {
+    display: flex;
+    gap: 3em;
+    margin: 0;
+  }
+
+  .heading {
+    font-size: 5rem;
+  }
+
+  .footer__about {
+    width: 50%;
+  }
+
+  .footer-heading {
+    margin-bottom: 1em;
+
+    font-size: 4rem;
+  }
+
+  .footer__about h3 {
+    text-align: start;
+  }
+  /* Add these styles to your media query for larger screens (min-width: 700px) */
+
+  .main-footer {
+    justify-content: space-between;
+  }
+
+  .footer__about,
+  .getting__around,
+  .other-things,
+  .And-more {
+    width: 25%; /* Equal width columns */
+    max-width: none; /* Remove the previous max-width constraint */
+    margin: 0; /* Remove the auto margins */
+  }
+
+  /* Align all footer headings and content to the left */
+  .footer-sub-heading,
+  .footer__about p,
+  .footer_navigation {
+    text-align: left;
+  }
+
+  .footer_navigation {
+    padding: 0; /* Remove any default padding */
+    list-style: none;
+  }
+
+  /* Remove the margin-top from items that don't need it in desktop view */
+  .margin {
+    margin-top: 0;
+  }
+}

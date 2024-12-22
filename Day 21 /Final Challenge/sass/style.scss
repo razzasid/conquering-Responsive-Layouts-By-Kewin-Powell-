@@ -1,0 +1,242 @@
+@import "utilities";
+
+header {
+  width: 100%;
+  background-color: $header;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  padding: 0em;
+  border-radius: 50%;
+  background: #232837;
+  color: white;
+  transition: opacity 250ms ease;
+
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+  opacity: 0.75;
+}
+
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.nav__list {
+  list-style: none;
+  margin-top: 2em;
+
+  .nav__item {
+    margin-top: 3em;
+  }
+  .nav__link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &--button {
+      background-color: $highlight;
+      padding: 5px 20px;
+      border-radius: 50px;
+    }
+
+    &:hover {
+      opacity: 0.65;
+    }
+  }
+}
+
+.hero_section {
+  background-color: $primary;
+  padding: 100px 0;
+  display: flex;
+  gap: 2em;
+}
+
+.heading {
+  font-size: 6rem;
+  color: white;
+  font-weight: bold;
+  line-height: 1.2;
+  .highlight {
+    color: $highlight;
+  }
+}
+
+.hero_content {
+  p {
+    font-family: "Montserrat";
+    font-size: 2rem;
+    color: white;
+    margin-block: 2em;
+  }
+
+  button {
+    background-color: $highlight;
+    padding: 10px 40px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.65;
+    }
+  }
+}
+
+.feature-section {
+  background-color: $secondary;
+  padding: 100px 0;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: $highlight;
+  margin-block: 1em;
+}
+
+.sub-section p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Montserrat";
+}
+
+.main-section {
+  padding: 100px 0;
+}
+
+.left-content {
+  max-width: 700px;
+}
+
+.left-content h3 {
+  font-size: 3.5rem;
+  color: $highlight;
+}
+
+.left-content p {
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+  margin-top: 2em;
+}
+
+.left-content img {
+  width: 100%;
+  margin-block: 2rem;
+}
+
+.black-box {
+  width: 100%;
+
+  text-align: center;
+  padding: 30px 20px;
+  background-color: $primary;
+  color: white;
+  margin-top: 5rem;
+}
+
+.black-box h3 {
+  font-size: 2em;
+  font-family: "Montserrat";
+  margin-bottom: 1em;
+}
+
+.black-box p {
+  font-size: 1.5em;
+  font-family: "Montserrat";
+}
+
+footer {
+  background-color: $primary;
+  padding: 60px 0;
+}
+
+.footer-heading {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.footer-sub-heading {
+  color: $highlight;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.footer__about {
+  width: 80%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.footer__about p {
+  width: 100%;
+  color: white;
+  font-family: "Montserrat";
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.footer_navigation {
+  text-align: center;
+  font-size: 2rem;
+}
+.margin {
+  margin-top: 2em;
+}
+@import "tablet";
+@import "desktop";
